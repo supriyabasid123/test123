@@ -1,0 +1,77 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Employee Form</title>
+<script>
+function validation()
+	{
+	var Firsrname=document.reg.name.value;
+	var middlename=document.reg.name1.value;
+	var Lastname=document.reg.name2.value;
+	var gender=document.reg.name3.value;
+	var city=document.reg.name4.value;
+	var joblocation=document.reg.name5.value;
+	var mobile=document.reg.name6.value;	
+	
+	
+	if(name.length>5)
+		{
+		alert("first name is not less 5");
+		return false;
+		}
+	 if(name1.length<7)
+		{
+		alert("middle name is not less 5");
+		return false;
+		}
+	
+	 if(name3!="male" || name3!="female")
+		{
+		alert("gender is only male and female");
+		return false;
+		}
+	 if(name4!="ratnagiri" || name4!="nashik" || name4!="pune" || name4!="mumbai")
+		{
+		alert("only this");
+		return false;
+		}
+	
+	 if(name6.length<12)
+		{
+		alert("mobule number 12 digit hote he");
+		return false
+		}
+	
+	}
+</script>
+</head>
+
+
+<body bgcolor="yellow">
+<font>
+<center>
+<h1>Student Managment System</h1>
+</center>
+</font>
+
+<form name="reg" action="insert.html" method="post" onsubmit=" return validation()">
+
+<table>
+<center></center>
+
+<tr><td>Firstname	:</td><td><input type="text" name="name"></td></tr><br>
+<tr><td>middlename	:</td><td><input type="text" name="name1"></td></tr><br>
+<tr><td>LAstname	:</td><td><input type="text" name="name2"></td></tr><br>
+<tr><td>gender 		:</td><td><input type="text" name="name3"></td></tr><br>
+<tr><td>city	    :</td><td><input type="text" name="name4"></td></tr><br>
+<tr><td>joblocation	:</td><td><input type="text" name="name5"></td></tr><br>
+<tr><td>mobile  	:</td><td><input type="text" name="name6"></td></tr><br>
+
+<tr><td><input type="submit" value="REGISTER"></td><tr>
+</center>
+</form>
+</body>
+</html>
